@@ -9,24 +9,32 @@ public class Connection {
     private int id;
 
     //child of user
-    @ManyToOne @JoinColumn User user;
+    @ManyToOne
+    @JoinColumn
+    User user;
 
     //child of service provider
-    @ManyToOne @JoinColumn ServiceProvider serviceProvider;
+    @ManyToOne
+    @JoinColumn
+    ServiceProvider serviceProvider;
 
     public Connection() {
     }
 
-    public int getId() {return id;
+    public int getId() {
+        return id;
     }
 
-    public void setId(int id) {this.id = id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public User getUser() {return user;
+    public User getUser() {
+        return user;
     }
 
-    public void setUser(User user) {this.user = user;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public ServiceProvider getServiceProvider() {
@@ -36,3 +44,4 @@ public class Connection {
     public void setServiceProvider(ServiceProvider serviceProvider) {
         this.serviceProvider = serviceProvider;
     }
+}
