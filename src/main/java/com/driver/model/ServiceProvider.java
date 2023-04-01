@@ -8,7 +8,8 @@ public class ServiceProvider {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    @ManyToOne @JoinColumn Admin admin;
+    @ManyToOne @JoinColumn
+    Admin admin;
 
     @ManyToMany(mappedBy = "serviceProviderList", cascade = CascadeType.ALL)
     List<User> users = new ArrayList<>();
