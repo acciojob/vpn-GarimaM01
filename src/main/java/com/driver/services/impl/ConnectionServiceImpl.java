@@ -80,6 +80,7 @@ public class ConnectionServiceImpl implements ConnectionService {
         if (!user.getConnected()){
             throw new Exception("Already disconnected");
         }
+
         user.setConnected(false);
         user.setMaskedIp(null);
 
